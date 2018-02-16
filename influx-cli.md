@@ -22,6 +22,8 @@ Set the data base for future requests
 
     use <name>
 
+More on [InfluxDB getting started](https://docs.influxdata.com/influxdb/v1.4/introduction/getting_started/).
+
 ## Values
 Insert an entry to the data base. The number of tags and files may vary.
 
@@ -34,3 +36,5 @@ Query all values for a measurement
 Query and filter values for a measurement. `where` can filter by `tag` or `field`
 
     select * from <name> where <tag1> = <value>
+
+More on [InfluxQL query](https://docs.influxdata.com/influxdb/v1.4/tools/api/#query).
