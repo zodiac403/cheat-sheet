@@ -28,6 +28,16 @@ Drop data base
 
     drop database <name>
 
+## Measurements
+
+Show available data bases
+
+    show measurements
+
+Drop (delete) measurement from data base
+
+    drop measurement <name>
+
 ## Values
 
 Insert an entry to the data base. The number of tags and files may vary.
