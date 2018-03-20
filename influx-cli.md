@@ -20,7 +20,7 @@ Create a data base
 
     create database <name>
 
-Set the data base for future requests
+Set the data base for further requests
 
     use <name>
 
