@@ -51,3 +51,16 @@ Query all values for a measurement
 Query and filter values for a measurement. `where` can filter by `tag` or `field`
 
     select * from <name> where <tag1> = <value>
+
+## Import / Export
+
+Instructions for import and export taken from [Stackoverflow](https://stackoverflow.com/questions/27779472/export-data-from-influxdb)
+
+Export data from a running data base to a local folder.
+
+    influxd backup -database <name> <folder>
+    
+Import data from a local folder to a stopped data base.
+
+    influxd restore -metadir /var/lib/influxdb/meta <folder>
+    influxd restore -database <name> -datadir /var/lib/influxdb/meta <folder>
