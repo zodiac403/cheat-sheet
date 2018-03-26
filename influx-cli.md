@@ -64,3 +64,7 @@ Import data from a local folder to a stopped data base.
 
     influxd restore -metadir /var/lib/influxdb/meta <folder>
     influxd restore -database <name> -datadir /var/lib/influxdb/meta <folder>
+
+## InfluxQL
+
+Functions: https://docs.influxdata.com/influxdb/v1.5/query_language/functions
