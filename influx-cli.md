@@ -40,9 +40,9 @@ Drop (delete) measurement from data base
 
 ## Values
 
-Insert an entry to the data base. The number of tags and files may vary.
+Insert an entry to the data base. The number of tags and files may vary. Time parameter is optional.
 
-    insert <name>,<tag1>=<value>,<tag2>=<value> <field1>=<value>,<field2>=<value>
+    insert <name>,<tag1>=<value>,<tag2>=<value> <field1>=<value>,<field2>=<value> <time>
 
 Query all values for a measurement
 
