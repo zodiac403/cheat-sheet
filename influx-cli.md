@@ -2,7 +2,7 @@
 
 ## Connect
 
-Connect the client to the data base. `-precision` specifies the time stamp format of DB results.
+Connect the client to the data base. `-precision` specifies the time stamp format for query results.
 
     influx -precision rfc3339
 
@@ -18,15 +18,15 @@ Show available data bases
 
 Create a data base
 
-    create database <name>
+    create database <database>
 
 Set the data base for further requests
 
-    use <name>
+    use <database>
 
 Drop data base
 
-    drop database <name>
+    drop database <database>
 
 ## Measurements
 
@@ -34,23 +34,23 @@ Show available data bases
 
     show measurements
 
-Drop (delete) measurement from data base
+Drop (delete) measurement from database
 
-    drop measurement <name>
+    drop measurement <measurement>
 
 ## Values
 
-Insert an entry to the data base. The number of tags and files may vary. Time parameter is optional.
+Insert an entry to the database. The number of tags and files may vary. If `time` parameter is ommited, Influx uses the current time.
 
-    insert <name>,<tag1>=<value>,<tag2>=<value> <field1>=<value>,<field2>=<value> <time>
+    insert <measurement>,<tag1>=<value>,<tag2>=<value> <field1>=<value>,<field2>=<value> <time>
 
 Query all values for a measurement
 
-    select * from <name>
+    select * from <measurement>
 
-Query and filter values for a measurement. `where` can filter by `tag` or `field`
+Query and filter values for a measurement. `where` can filter by `tag` or `field`. Combine multiple tags and fields with `and` or `or`.
 
-    select * from <name> where <tag1> = <value>
+    select * from <measurement> where <tag1>=<value>
 
 ## Import / Export
 
@@ -60,10 +60,10 @@ Export data from a running data base to a local folder.
 
     influxd backup -database <name> <folder>
     
-Import data from a local folder to a stopped data base.
+Import data from local `folder` to a stopped data base. Values for `metadir` and `datadir` must be Influx persisting directories.
 
     influxd restore -metadir /var/lib/influxdb/meta <folder>
-    influxd restore -database <name> -datadir /var/lib/influxdb/meta <folder>
+    influxd restore -database <name> -datadir /var/lib/influxdb/data <folder>
 
 ## InfluxQL
 
