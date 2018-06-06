@@ -60,11 +60,18 @@ Export data from a running data base to a local folder.
 
     influxd backup -database <name> <folder>
     
-Import data from local `folder` to a stopped data base. Values for `metadir` and `datadir` must be Influx persisting directories.
-
+Import data from local `folder` to a stopped data base. Values for `metadir` and `datadir` must be Influx persisting directories:
+* Linux
+    ```
     influxd restore -metadir /var/lib/influxdb/meta <folder>
     influxd restore -database <name> -datadir /var/lib/influxdb/data <folder>
+    ```
 
+* Windows
+    ```
+    influxd restore -metadir %USERPROFILE%/.influxdb/meta <folder>
+    influxd restore -database <name> -datadir %USERPROFILE%/.influxdb/data <folder>
+    ```
 ## InfluxQL
 
 Functions: https://docs.influxdata.com/influxdb/v1.5/query_language/functions
