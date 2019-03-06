@@ -50,7 +50,11 @@ Query all values for a measurement
 
 Query and filter values for a measurement. `where` can filter by `tag` or `field`. Combine multiple tags and fields with `and` or `or`.
 
-    select * from <measurement> where <tag1>=<value>
+    select <field> from <measurement> where <tag>=<value>
+
+Delete rows in measurement
+
+    delete from <measurement> where <tag>=<value> and time<=<time>
 
 ## Import / Export
 
