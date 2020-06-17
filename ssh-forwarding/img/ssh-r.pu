@@ -1,0 +1,15 @@
+@startuml
+
+title SSH Remote Forwarding
+skinparam monochrome true
+
+participant Browser as b
+participant "SSH\nServer" as sshs
+participant "SSH\nClient" as sshc
+participant "Web\nServer" as webs
+
+b -> sshs : curl :8080
+sshs -> sshc
+sshc -> webs : get :80
+
+@enduml
