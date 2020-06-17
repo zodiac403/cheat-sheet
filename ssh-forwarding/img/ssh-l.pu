@@ -1,0 +1,15 @@
+@startuml
+
+title SSH Local Forwarding
+skinparam monochrome true
+
+participant Browser as b
+participant "SSH\nClient" as sshc
+participant "SSH\nServer" as sshs
+participant "Web\nServer" as webs
+
+b -> sshc : curl :8080
+sshc -> sshs
+sshs -> webs : get :80
+
+@enduml
