@@ -1,20 +1,20 @@
 # Python Virtual Environment
 
-See [documentation](https://docs.python.org/3/tutorial/venv.html).
+See [venv documentation](https://docs.python.org/3/tutorial/venv.html).
 
 ## Initialize
 
-Create a virtual environment in folder (e.g. `my-venv`)
+Create a virtual environment in folder (e.g. `.venv`)
 
 ```sh
 cd PROJECT_DIR
-python -m venv my-venv
+python -m venv .venv
 ```
 
 Activate this virtual environment
 
-- Linux/MacOS: `source my-venv/bin/activate`
-- Windows: `my-venv\Scripts\activate.bat`
+- Linux/MacOS: `source .venv/bin/activate`
+- Windows: `.venv\Scripts\activate.bat`
 
 Manage Pip packages inside the virtual environment
 
