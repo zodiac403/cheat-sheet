@@ -40,7 +40,7 @@ Drop (delete) measurement from database
 
 ## Values
 
-Insert an entry to the database. The number of tags and files may vary. If `time` parameter is ommited, Influx uses the current time.
+Insert an entry to the database. The number of tags and files may vary. If `time` parameter is omitted, Influx uses the current time.
 
     insert <measurement>,<tag1>=<value>,<tag2>=<value> <field1>=<value>,<field2>=<value> <time>
 
@@ -63,23 +63,23 @@ Instructions for import and export taken from [Stackoverflow](https://stackoverf
 Export data from a running data base to a local folder.
 
     influxd backup -database <name> <folder>
-    
+
 Import data from local `folder` to a stopped data base. Values for `metadir` and `datadir` must be Influx persisting directories.
 
 ### Linux
 
-```
+```bash
 influxd restore -metadir /var/lib/influxdb/meta <folder>
 influxd restore -database <name> -datadir /var/lib/influxdb/data <folder>
 ```
 
 ### Windows
 
-```
+```cmd
 influxd restore -metadir %USERPROFILE%/.influxdb/meta <folder>
 influxd restore -database <name> -datadir %USERPROFILE%/.influxdb/data <folder>
 ```
 
 ## InfluxQL
 
-Functions: https://docs.influxdata.com/influxdb/v1.5/query_language/functions
+See [Functions documentation](https://docs.influxdata.com/influxdb/v1.5/query_language/functions)

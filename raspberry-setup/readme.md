@@ -8,7 +8,7 @@ This checklist sets up a Raspberry Pi with the following features:
 
 ## Setup Device and Install Operating System
 
-The general entry point for Raspberry Pi setup, see the [docs](https://www.raspberrypi.org/documentation/setup/).
+The general entry point for Raspberry Pi setup, see the [Setup documentation>](https://www.raspberrypi.org/documentation/setup/).
 
 > TODO: Download link
 
@@ -48,7 +48,7 @@ sudo nano wpa_supplicant.conf
 
 Make sure that this creates a new file. Place the content. `country` is a two letter country code (e.g. `GB` or `DE`) and `network` is the output of `wpa_passphrase`.
 
-```txt
+```ini
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 country=<Insert country code here>
