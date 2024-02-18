@@ -8,4 +8,6 @@ Merge multiple PDF documents to one:
 
 - Provide `input files` as space seperated list of file path, relative to working directory. Wildcards allowed.
 
+```sh
     pdftk <input files> cat output <output file>
+```
