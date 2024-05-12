@@ -11,7 +11,7 @@ sudo apt-get install unattended-upgrades apt-listchanges
 How to evaluate log files
 
 ```sh
-pusdh WKDIR
+pushd WKDIR
 cp /var/log/unattended-upgrades/unattended-upgrades.* ./
 gzip -d FILE.gz
 cat FILE
